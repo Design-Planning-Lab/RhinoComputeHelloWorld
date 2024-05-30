@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "gh-rhinocompue"
+version = "0.1.0"
+description = ""
+authors = ["cookiedan42 <cookiedan42>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+rhino3dm = "^8.6.1"
+compute-rhino3d = "^0.12.2"
+python-dotenv = "^1.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
