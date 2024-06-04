@@ -20,4 +20,4 @@ jobs:
         role-to-assume: ${{ secrets.S3_PUSH_ROLE }}
         
     - name: Push to S3 Bucket subfolder
-      run: aws s3 cp ./Add s3://${{ secrets.AWS_S3_BUCKET }}/Add
+      run: aws s3 cp ./Add s3://${{ secrets.AWS_S3_BUCKET }}/Add --recursive
