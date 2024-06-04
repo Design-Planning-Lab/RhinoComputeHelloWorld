@@ -19,5 +19,5 @@ jobs:
         aws-region: us-west-1
         role-to-assume: ${{ secrets.S3_PUSH_ROLE }}
         
-    - name: List S3 Buckets
-      run: aws s3 ls
+    - name: Push to S3 Bucket subfolder
+      run: aws s3 cp ./Add s3://${{ secrets.AWS_S3_BUCKET }}/Add
