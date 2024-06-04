@@ -1,0 +1,23 @@
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  show-buckets:
+    name: List S3 Buckets
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write # This will tell Github to provide a GITHUB_TOKEN
+      contents: read  # This allow git checkout
+      
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-region: us-west-1
+        role-to-assume: ${{ secrets.S3_PUSH_ROLE }}
+        
+    - name: List S3 Buckets
+      run: aws s3 ls
