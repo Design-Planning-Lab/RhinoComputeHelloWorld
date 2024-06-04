@@ -15,6 +15,6 @@ y.Append([0], [1])
 
 tree = GH.DataTree("root")
 tree.Append([0, 1], [x, y])
-# resByURL = GH.EvaluateDefinition("https://github.com/cookiedan42/RhinoComputeHelloWorld/raw/main/Add.gh", [x, y])
-resByLocal = GH.EvaluateDefinition("./Add.gh", [x, y])
+# resByURL = GH.EvaluateDefinition("https://github.com/cookiedan42/RhinoComputeHelloWorld/raw/main/Add/Add.gh", [x, y])
+resByLocal = GH.EvaluateDefinition("./Add/Add.gh", [x, y])
 print(resByLocal)
